@@ -10,6 +10,6 @@ class Subcategory extends DataObject{
 	);
 
 	static $has_many = array(
-		
+		'Products' => 'Product'
 	);
 }

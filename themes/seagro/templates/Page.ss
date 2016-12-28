@@ -29,8 +29,9 @@
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="fondo">
+	$Form
     <% include Navbar %>
-    $Layout
+	$Layout
     <% include Footer %>
     <% require javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') %>
     <% require javascript('themes/seagro/javascript/webflow.js') %>
