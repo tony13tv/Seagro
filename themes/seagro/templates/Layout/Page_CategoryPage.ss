@@ -50,34 +50,22 @@
         <div class="barra-content">
             <div class="filtros">
                 <div class="w-form">
-                    <form data-name="Email Form" id="email-form" name="email-form">
-                        <div class="w-row">
-                            <div class="w-col w-col-4">
-                                <select class="filtro w-select" data-name="tipo" id="tipo" name="tipo">
-                                    <option value="">FILTRAR POR TIPO</option>
-                                    <option value="tipo 1">TIPO 1</option>
-                                    <option value="Tipo 2">TIPO 2</option>
-                                    <option value="tipo 3">TIPO 3</option>
-                                </select>
-                            </div>
-                            <div class="w-col w-col-4">
-                                <select class="filtro w-select" data-name="Tipo 2" id="tipo-2" name="tipo-2">
-                                    <option value="">FILTRAR POR MARCA</option>
-                                    <option value="tipo 1">TIPO 1</option>
-                                    <option value="Tipo 2">TIPO 2</option>
-                                    <option value="tipo 3">TIPO 3</option>
-                                </select>
-                            </div>
-                            <div class="w-col w-col-4"><a class="boton-buscar w-button" href="#">BUSCAR</a>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form</div>
-                    </div>
+                    <% with $SearchProductsForm %>
+                        <form $FormAttributes>
+                            <div class="w-row">
+                                <% loop $Fields %>
+                                <div class="w-col w-col-4">
+                                    $Field
+                                </div>
+                                <% end_loop %>
+                                <% loop $Actions %>
+                                <div class="w-col w-col-4">
+                                    $Field
+                                </div>
+                                <% end_loop %>
+                            </div> 
+                        </form>
+                    <% end_with %>
                 </div>
             </div>
             <div class="contendor-productos">

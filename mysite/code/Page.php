@@ -26,7 +26,7 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
-		'CategoryPage'
+		'CategoryPage', 'SearchProductsForm'
 	);
 
 	private static $url_handlers = array(
@@ -57,4 +57,40 @@ class Page_Controller extends ContentController {
 		return $products;
 	}
 
+	public function SearchProductsForm() {
+		$categoryId = "";
+
+		if (!empty($this->getRequest()->param('ID')) && !is_null($this->getRequest()->param('ID'))) {
+			$categoryId = $this->getRequest()->param('ID');
+		}
+
+		$category = Category::get()->byID($categoryId);
+		$fields = new FieldList(
+			HiddenField::create('CategoryID')->setValue($category->ID),
+			DropdownField::create('SubcategoryID', 'Subcategory')->setSource($category->Subcategories()->map()->toArray())->addExtraClass('filtro w-select')->setTitle('Subcategory')->setEmptyString('FILTRAR POR TIPO'),
+			DropdownField::create('BrandID', 'Brand')->setSource(Brand::get()->map()->toArray())->addExtraClass('filtro w-select')->setTitle('Brand')->setEmptyString('FILTRAR POR MARCA')
+		);
+		$actions = new FieldList(
+				FormAction::create('SearchProductsSubmit', 'BUSCAR')->addExtraClass('boton-buscar w-button')
+		);
+		$form = new Form($this, 'SearchProductsForm', $fields, $actions);
+		$form->setFormMethod('GET');
+		return $form;
+	}
+
+	public function SearchProductsSubmit($data, $SearchProductsForm) {
+		$filters = array();
+
+		if (! empty($data['SubcategoryID'])){
+			$filters['SubcategoryID'] = $data['SubcategoryID'];
+		}
+
+		if (! empty($data['BrandID'])){
+			$filters['BrandID'] = $data['BrandID'];
+		}
+
+		$result = Product::get()->filter($filters);
+		$SearchProductsForm->loadDataFrom($data);
+		return null;
+	}
 }

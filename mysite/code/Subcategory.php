@@ -6,7 +6,7 @@ class Subcategory extends DataObject{
 	);
 
 	static $has_one = array(
-		'Category' => 'Category'
+		'CategoryPage' => 'CategoryPage'
 	);
 
 	static $has_many = array(

@@ -8,8 +8,4 @@ class Category extends DataObject {
 		'PrincipalImg' => 'Image',
 		'Icon' => 'Image'
 	);
-
-	static $has_many = array(
-		'Subcategories' => 'Subcategory'
-	);
 }
