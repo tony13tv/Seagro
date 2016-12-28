@@ -15,6 +15,6 @@ class HomePage extends Page{
 class HomePage_Controller extends Page_Controller{
 
 	public function Categories() {
-		return Category::get();
+		return CategoryPage::get();
 	}
 }

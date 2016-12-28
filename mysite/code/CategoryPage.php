@@ -13,6 +13,8 @@ class CategoryPage extends Page{
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Subcategories', new GridField('Subcategories', 'Subcategories', $this->Subcategories(), new GridFieldConfig_RelationEditor()));
+		$fields->addFieldToTab('Root.Main', new UploadField('PrincipalImg'), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('Icon'), 'Content');
 		$fields->addFieldToTab('Root.Main', new DropdownField('ParentID', 'Parent', ProductHolder::get()->map()->toArray()));
 		return $fields;
 	}
