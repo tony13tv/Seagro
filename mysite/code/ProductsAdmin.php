@@ -4,8 +4,8 @@ class ProductsAdmin extends ModelAdmin {
 
 	private static $managed_models = array(
 		'Category',
+		'Subcategory',
 		'Brand',
-		'Type',
 		'Product'
 	);
 

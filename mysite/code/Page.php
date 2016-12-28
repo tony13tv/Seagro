@@ -44,8 +44,16 @@ class Page_Controller extends ContentController {
 	}
 
 	public function CategoryPage() {
-		$categories = Category::get()->byID($this->getRequest()->param('ID'));
-		return $this->customise(compact('categories'))->renderWith(array('Page_CategoryPage', 'Page'));
+		$category = Category::get()->byID($this->getRequest()->param('ID'));
+		return $this->customise(compact('category'))->renderWith(array('Page_CategoryPage', 'Page'));
+	}
+
+	public function CategoryProducts($category){
+		$products = Product::get()
+			->innerJoin("Subcategory", "\"Product\".\"SubcategoryID\" = \"Subcategory\".\"ID\"")
+			->innerJoin("Category", "\"Subcategory\".\"CategoryID\" = \"Category\".\"ID\"");
+			//->where("\"Category\".\"ID\" = " . $category->ID);
+		return $products;
 	}
 
 }
