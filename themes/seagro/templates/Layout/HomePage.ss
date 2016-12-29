@@ -52,25 +52,20 @@
     </div>
 </div>
 <div class="seccin-quines-somos">
-    <div class="contenedor-quienes-somos"><img class="circle" data-ix="circle" src="images/circle.png">
+    <div class="contenedor-quienes-somos"><img class="circle" data-ix="circle" src="$ThemeDir/images/circle.png">
         <div class="row-quienes-somos w-row">
             <div class="colum-izquierda w-col w-col-6">
-                <div class="pic1-coffee" data-ix="pic-coffee"></div>
+                <div class="pic1-coffee" data-ix="pic-coffee" style="background-image: url($AboutImg1.URL)"></div>
                 <div>
                     <h1 class="quienes-somos tituloslide" data-ix="productos-up-2"><em>Porque ser</em> <strong><em>Agro</em></strong> <em>es</em><br><em>es sentir</em> <strong><em>orgullo por Honduras,</em></strong><br><em>es amor por nuestras tierras</em><br><em>y sus cultivos</em></h1>
                 </div>
             </div>
             <div class="colum-derecha w-col w-col-6">
-                <div class="pic-tractor" data-ix="pic-tractor"></div>
+                <div class="pic-tractor" data-ix="pic-tractor" style="background-image: url($AboutImg2.URL)"></div>
                 <div>
                     <div class="_2 contenido w-richtext" data-ix="productos-up-2">
-                        <p>h text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.
-                            <br>
-                        </p>
-                        <p>Static and dynamic content editing</p>
-                        <p>A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
-                        <p>‍</p>
-                    </div><a class="boton-about w-button" href="quienes-somos.html">CONOCER MÁS SOBRE <strong>SEAGRO</strong></a>
+                        $AboutContent
+                    </div><a class="boton-about w-button" href="$Page('quienes-somos').Link">CONOCER MÁS SOBRE <strong>SEAGRO</strong></a>
                 </div>
             </div>
         </div>

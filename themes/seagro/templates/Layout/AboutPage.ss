@@ -1,7 +1,6 @@
 <div class="header interna" >
     <div class="navegacion">
-        <div class="breadcrum"><a class="breadcrumb" href="index.html">INICIO &nbsp;·</a>
-        </div>
+		<% include BreadCrumbs %>
         <h1 class="titulo-interna">QUIENES SOMOS</h1>
     </div>
 </div>

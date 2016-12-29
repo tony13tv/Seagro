@@ -37,8 +37,7 @@
 <% include Navbar %>
 <div class="header interna">
     <div class="navegacion">
-        <div class="breadcrum"><a class="breadcrumb" href="index.html">INICIO &nbsp;·</a><a class="breadcrumb" href="index.html">PRODUCTOS</a>
-        </div>
+        <% include BreadCrumbs %>
         <h1 class="titulo-interna">$Title</h1>
     </div>
     <div class="icono_producto">
