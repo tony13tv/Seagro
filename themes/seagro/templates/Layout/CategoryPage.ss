@@ -198,21 +198,3 @@
         </div>
     </div>
 </div>
-<div class="seccin-logo">
-    <div class="slider-logos">
-        <div class="slider-logos w-slider" data-animation="slide" data-autoplay="1" data-delay="4000" data-duration="500" data-infinite="1">
-            <div class="w-slider-mask">
-                <div class="slide-logo w-slide"><img src="images/seagro4_0000_jacto.png">
-                </div>
-                <div class="_2 slide-logo w-slide"><img src="images/seagro4_0001_coda.png">
-                </div>
-                <div class="_3 slide-logo w-slide"><img src="images/seagro4_0002_pindstrup.png">
-                </div>
-                <div class="_2 slide-logo w-slide"><img src="images/seagro4_0003_planProd.png">
-                </div>
-                <div class="_2 slide-logo w-slide"><img src="images/seagro4_0004_rijik-zwaan.png">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
