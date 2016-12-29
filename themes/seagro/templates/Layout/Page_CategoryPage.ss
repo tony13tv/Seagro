@@ -50,120 +50,52 @@
         <div class="barra-content">
             <div class="filtros">
                 <div class="w-form">
-                    <form data-name="Email Form" id="email-form" name="email-form">
-                        <div class="w-row">
-                            <div class="w-col w-col-4">
-                                <select class="filtro w-select" data-name="tipo" id="tipo" name="tipo">
-                                    <option value="">FILTRAR POR TIPO</option>
-                                    <option value="tipo 1">TIPO 1</option>
-                                    <option value="Tipo 2">TIPO 2</option>
-                                    <option value="tipo 3">TIPO 3</option>
-                                </select>
-                            </div>
-                            <div class="w-col w-col-4">
-                                <select class="filtro w-select" data-name="Tipo 2" id="tipo-2" name="tipo-2">
-                                    <option value="">FILTRAR POR MARCA</option>
-                                    <option value="tipo 1">TIPO 1</option>
-                                    <option value="Tipo 2">TIPO 2</option>
-                                    <option value="tipo 3">TIPO 3</option>
-                                </select>
-                            </div>
-                            <div class="w-col w-col-4"><a class="boton-buscar w-button" href="#">BUSCAR</a>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form</div>
-                    </div>
+                    <% with $SearchProductsForm %>
+                        <form $FormAttributes>
+                            <div class="w-row">
+                                <% loop $Fields %>
+                                <div class="w-col w-col-4">
+                                    $Field
+                                </div>
+                                <% end_loop %>
+                                <% loop $Actions %>
+                                <div class="w-col w-col-4">
+                                    $Field
+                                </div>
+                                <% end_loop %>
+                            </div> 
+                        </form>
+                    <% end_with %>
                 </div>
             </div>
             <div class="contendor-productos">
-				<% loop $CategoryProducts %>
-					<h1>$Name</h1>
-				<% end_loop %>
-                <div class="row-productos w-row">
+                <% loop $CategoryProducts %>
+                    <% if $MultipleOf(4, $min) %>
+                        <div class="row-productos w-row">
+                    <% end_if %>
+                    <style>
+                        .foto-product-{$ID} {
+                            background-image: url($ProductImg.URL) !important;
+                        }
+                        .foto-product-{$ID}:hover {
+                            background-image: linear-gradient(180deg, rgba(34, 126, 86, .73), rgba(34, 126, 86, .73)), url($ProductImg.URL) !important;
+                        }
+                    </style>
                     <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
                         <div>
                             <a class="box-producto w-inline-block" data-ix="abrir-producto" href="#">
-                                <div class="_1 foto"></div>
+                                <div class="_1 foto foto-product-{$ID}"></div>
                                 <div class="texto">
-                                    <h1 class="titulo-producto">AST – ARADO SUBSOLADOR TATU</h1>
-                                    <div class="marca">MARCA</div>
+                                    <h1 class="titulo-producto">$Name</h1>
+                                    <div class="marca">$Brand.Name</div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_2 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">AST-MATIC E 550</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_3 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">AST - MATIC E 550</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_4 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">ATCR – ARADORA TATU CONTROL REMOTO</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row-productos w-row">
-                    <div class="w-col w-col-3 w-col-medium-6">
-                        <div>
-                            <a class="box-producto w-inline-block" href="#">
-                                <div class="_5 foto"></div>
-                                <div class="texto">
-                                    <h1 class="titulo-producto">CAC – CULTIVADOR ABONADOR DE COBERTURA</h1>
-                                    <div class="marca">MARCA</div>
-                                </div>
-                            </a>
+                    <% if $MultipleOf(4) || $Last %>
                         </div>
-                    </div>
-                    <div class="w-col w-col-3 w-col-medium-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_6 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">Cocechadora <br>Ceiflex 3000 T</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-col w-col-3 w-col-medium-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_7 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">Chumacera de Grasa</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="w-col w-col-3 w-col-medium-6">
-                        <a class="box-producto w-inline-block" href="#">
-                            <div class="_8 foto"></div>
-                            <div class="texto">
-                                <h1 class="titulo-producto">Cocechadora Master Export Múltipla</h1>
-                                <div class="marca">MARCA</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                    <% end_if %>
+                <% end_loop %>
             </div>
         </div>
     </div>

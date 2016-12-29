@@ -1391,4 +1391,25 @@ html.w-mod-js *[data-ix="pic-tractor"] {
     padding-left: 10px;
   }
 }
+.Pagination ul li{
+	display: inline-block;
+	padding: 4px 10px;
+	border: none;
+	border-radius: 15px;
+	margin-left: 0;
+	line-height: 22px;
+	min-width: 30px;
+}
 
+.Pagination ul{
+	display: table;
+	margin: 20px auto;
+}
+.Pagination ul li a{
+	text-decoration: none;
+	color: #0e0e0e;
+}
+.current-pagination{
+	background-color: #7ab53e;
+	color: white;
+}

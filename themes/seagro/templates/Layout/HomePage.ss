@@ -36,7 +36,7 @@
                 }
             </style>
             <div class="w-col w-col-3 w-col-medium-6 w-col-small-6 w-col-tiny-6">
-                <a class="link w-inline-block" href="$Top.Link('category')/$ID">
+                <a class="link w-inline-block" href="$Link">
                     <div class="picbox">
                         <div class="imagepic imagepic-{$ID}">
                             <h1 class="titulo-productos">$Title</h1>
