@@ -953,7 +953,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1149,6 +1150,11 @@ html.w-mod-js *[data-ix="pic-tractor"] {
   }
   .box-producto {
     margin-bottom: 9px;
+  }
+
+  .modal-dialog {
+    width: 965px;
+    margin: 30px auto;
   }
 }
 
@@ -1413,4 +1419,14 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 .current-pagination{
 	background-color: #7ab53e;
 	color: white;
+}
+
+.box-producto:hover, .box-producto:focus {
+	text-decoration: none;
+}
+
+.box-producto:focus {
+	text-decoration: none;
+	color: #97bb48;
+	outline: transparent;
 }

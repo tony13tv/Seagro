@@ -16,6 +16,7 @@
     <% require themedCSS('normalize') %>
     <% require themedCSS('webflow') %>
     <% require themedCSS('seagro.webflow') %>
+	<% require themedCSS('bootstrap.min') %>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
     <script type="text/javascript">
         WebFont.load({
@@ -35,5 +36,6 @@
     <% include Footer %>
     <% require javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') %>
     <% require javascript('themes/seagro/javascript/webflow.js') %>
+	<% require javascript('themes/seagro/javascript/bootstrap.min.js') %>
 </body>
 </html>
