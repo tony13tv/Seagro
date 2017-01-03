@@ -1421,7 +1421,7 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 	color: white;
 }
 
-.box-producto:hover, .box-producto:focus {
+.box-producto:hover{
 	text-decoration: none;
 }
 
@@ -1429,4 +1429,35 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 	text-decoration: none;
 	color: #97bb48;
 	outline: transparent;
+}
+.w-button:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.field.producto{
+	width: 78%;
+	float: left;
+	margin-right: 14px;
+}
+
+.field.cantidad{
+	width: 20%;
+}
+
+.boton-quote {
+	border-radius: 7px;
+	background-color: #ff7a00;
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+}
+
+.boton-quote:hover {
+	background-color: #2892b4;
+}
+
+.form-quote{
+	margin-left: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }

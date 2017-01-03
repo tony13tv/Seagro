@@ -63,7 +63,7 @@
                                 <div class="box-contenido-producto">
                                     <div class="texto">
                                         <h1 class="titulo-producto verde">$Name</h1>
-										<a class="boton-about w-button" href="#">COTIZAR PRODUCTO</a>
+										<a class="boton-about w-button" href="$Top.Page('cotizar').Link('append')/$ID">COTIZAR PRODUCTO</a>
                                         <div class="_2 marca">MARCA: <strong>$Brand.Name</strong>
                                             <br>CATEGORÍA: <strong style="text-transform: uppercase">$Subcategory.Name</strong>
                                             <br>CÓDIGO DE PRODUCTO: <strong>$Code</strong>
@@ -95,7 +95,7 @@
         <img src="$Icon.URL">
     </div>
 </div>
-<div class="picslider producto w-hidden-tiny" style="background-image: url($PrincipalImg.URL);"></div>
+<div class="picslider producto w-hidden-tiny" style="background-image: url($Banner.URL);"></div>
 <div class="contenido-interior">
     <div>
         <div class="barra-content">

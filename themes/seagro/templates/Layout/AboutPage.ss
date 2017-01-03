@@ -1,7 +1,7 @@
 <div class="header interna" >
     <div class="navegacion">
 		<% include BreadCrumbs %>
-        <h1 class="titulo-interna">QUIENES SOMOS</h1>
+        <h1 class="titulo-interna">$Title</h1>
     </div>
 </div>
 <div class="picslider w-hidden-tiny" style="background-image: url($Banner.URL)"></div>
