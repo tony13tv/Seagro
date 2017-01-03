@@ -1,0 +1,33 @@
+es:
+  AboutPage:
+    PLURALNAME: Sobre nosotros
+    SINGULARNAME: Sobre nosotros
+  Brand:
+    PLURALNAME: Marcas
+    SINGULARNAME: Marca
+    db_Name: Nombre
+  CategoryPage:
+    PLURALNAME: Categorías
+    SINGULARNAME: Categoría
+  Slide:
+    PLURALNAME: Slider
+    SINGULARNAME: Slide
+    db_Content: Contenido
+    has_one_Image: Imagen de fondo
+    has_one_ProductImage: Imagen de producto
+  Product:
+    PLURALNAME: Productos
+    SINGULARNAME: Producto
+    db_Name: Nombre
+    db_Code: Código
+    db_Identifier: ID
+    db_Description: Descripción
+    has_one_ProductImg: Imagen del producto
+    has_one_Brand: Marca
+    has_one_Subcategory: Subcategoría
+  Subcategory:
+    PLURALNAME: Subcategorías
+    SINGULARNAME: Subcategoría
+    db_Name: Nombre
+    has_one_CategoryPage: Categoría
+    has_many_Products: Productos

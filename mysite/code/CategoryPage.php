@@ -14,10 +14,10 @@ class CategoryPage extends Page{
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Subcategories', new GridField('Subcategories', 'Subcategories', $this->Subcategories(), new GridFieldConfig_RelationEditor()));
-		$fields->addFieldToTab('Root.Main', new UploadField('Banner'), 'Content');
-		$fields->addFieldToTab('Root.Main', new UploadField('PrincipalImg'), 'Content');
-		$fields->addFieldToTab('Root.Main', new UploadField('Icon'), 'Content');
-		$fields->addFieldToTab('Root.Main', new DropdownField('ParentID', 'Parent', ProductHolder::get()->map()->toArray()));
+		$fields->addFieldToTab('Root.Main', new UploadField('Banner', _t('CategoryPage.db_Banner', 'Banner')), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('PrincipalImg', _t('CategoryPage.db_PrincipalImg', 'Imagen principal')), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('Icon', _t('CategoryPage.db_Icon', 'Icono')), 'Content');
+		$fields->addFieldToTab('Root.Main', new DropdownField('ParentID', 'Padre', ProductHolder::get()->map()->toArray()));
 		return $fields;
 	}
 }

@@ -12,9 +12,9 @@ class AboutPage extends Page{
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Main',new HtmlEditorField('Content2'));
-		$fields->addFieldToTab('Root.Main', new UploadField('Banner'), 'Content');
-		$fields->addFieldToTab('Root.Main', new UploadField('MiddleImg'), 'Content');
+		$fields->addFieldToTab('Root.Main',new HtmlEditorField('Content2', _t('AboutPage.db_Content2', 'Contenido inferior')));
+		$fields->addFieldToTab('Root.Main', new UploadField('Banner',  _t('AboutPage.has_one_Banner', 'Banner')), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('MiddleImg',  _t('AboutPage.has_one_MiddleImg', 'Imagen Central')), 'Content');
 		return $fields;
 	}
 }
