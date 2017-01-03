@@ -26,6 +26,7 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
+		'SearchForm'
 	);
 
 	private static $url_handlers = array(
@@ -43,5 +44,28 @@ class Page_Controller extends ContentController {
 
 	public function AllLogos(){
 		return HomePage::get()->first()->Logos();
+	}
+
+	function SearchForm() {
+		$searchText = isset($this->Query) ? $this->Query : '';
+		$fields = new FieldList(
+			TextField::create("Search", "", $searchText)->setAttribute('placeholder','Buscar')->addExtraClass('w-input')
+		);
+		$actions = new FieldList(
+			new FormAction('results', 'Buscar')
+		);
+		return new SearchForm($this, "SearchForm", $fields, $actions);
+	}
+
+	function results($data, SearchForm $form){
+		$results =	$form->getResults();
+		$results->merge(Product::get()->filter('Name:PartialMatch', $form->getSearchQuery()));
+		$data = array(
+			'Results' => $results,
+			'Query' => $form->getSearchQuery(),
+			'Title' => 'Search Results'
+		);
+		$this->Query = $form->getSearchQuery();
+		return $this->customise($data)->renderWith(array('Page_search', 'Page'));
 	}
 }

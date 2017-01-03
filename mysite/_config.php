@@ -1,7 +1,7 @@
 <?php
 
 global $project;
-$project = 'mysite';
+$project = 'Seagro';
 
 global $databaseConfig;
 $databaseConfig = array(
@@ -21,3 +21,4 @@ define('SS_ENVIRONMENT_TYPE', 'dev');
 define('SENDGRIDMAILER_USERNAME', 'premperhn');
 define('SENDGRIDMAILER_PASSWORD', 'pr3mper2015');
 define('SENDGRIDMAILER_MAIL', 'Seagro <noreply@seagro.com>');
+FulltextSearchable::enable();

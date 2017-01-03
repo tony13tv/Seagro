@@ -1461,3 +1461,11 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
+.link-search{
+	color: rgba(51, 51, 51, .58);
+}
+
+.link-search:hover {
+	color: rgba(51, 51, 51, .58);
+	text-decoration: none;
+}

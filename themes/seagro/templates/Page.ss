@@ -29,7 +29,7 @@
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
-<body class="fondo <% if $ClassName != 'HomePage'%> interna <% end_if %>">
+<body class="fondo <% if $ClassName != 'HomePage' %> interna <% else_if $Title != 'Inicio' %> interna <% end_if %>">
 	$Form
     <% include Navbar %>
 	$Layout
