@@ -1469,3 +1469,35 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 	color: rgba(51, 51, 51, .58);
 	text-decoration: none;
 }
+
+#MemberLoginForm_LoginForm input[type="text"], #MemberLoginForm_LoginForm input[type="password"]{
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 8px 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333333;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+}
+
+#MemberLoginForm_LoginForm input[type="submit"]{
+	border-radius: 7px !important;
+	background-color: #ff7a00;
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+	display: inline-block;
+	padding: 9px 15px;
+	color: white;
+	border: 0;
+	line-height: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 0;
+}
+#MemberLoginForm_LoginForm fieldset{
+	border: 0px;
+}

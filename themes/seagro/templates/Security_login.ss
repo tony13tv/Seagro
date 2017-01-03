@@ -7,15 +7,15 @@
 <!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
 <head>
-    <% base_tag %>
+	<% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    $MetaTags(false)
-    <% require themedCSS('normalize') %>
-    <% require themedCSS('webflow') %>
-    <% require themedCSS('seagro.webflow') %>
+	$MetaTags(false)
+	<% require themedCSS('normalize') %>
+	<% require themedCSS('webflow') %>
+	<% require themedCSS('seagro.webflow') %>
 	<% require themedCSS('bootstrap.min') %>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
     <script type="text/javascript">
@@ -25,18 +25,31 @@
             }
         });
     </script>
-    <% require javascript('themes/seagro/javascript/modernizr.js') %>
+	<% require javascript('themes/seagro/javascript/modernizr.js') %>
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
-<body class="fondo <% if $ClassName != 'HomePage' %> interna <% else_if $Title != 'Inicio' %> interna <% end_if %>">
-	$Form
+<body class="fondo interna ">
 	<% include Navbar %>
-
-	$Layout
-    <% include Footer %>
-    <% require javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') %>
-    <% require javascript('themes/seagro/javascript/webflow.js') %>
+	<div class="header interna" >
+		<div class="navegacion">
+			<% include BreadCrumbs %>
+			<h1 class="titulo-interna">$Title</h1>
+		</div>
+	</div>
+	<div class="picslider w-hidden-tiny" style="background-image: url($ThemeDir/images/fotos-p-500x375.png)"></div>
+<div class="contenido-interior">
+    <div>
+        <div class="w-row">
+			<div class="w-col w-col-6" style="margin-bottom: 20px;">
+				$Form
+			</div>
+		</div>
+	</div>
+</div>
+	<% include Footer %>
+	<% require javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') %>
+	<% require javascript('themes/seagro/javascript/webflow.js') %>
 	<% require javascript('themes/seagro/javascript/bootstrap.min.js') %>
 </body>
 </html>
