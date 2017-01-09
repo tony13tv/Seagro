@@ -8,7 +8,8 @@
 		"silverstripe/reports": "3.5.1",
 		"silverstripe/siteconfig": "3.5.1",
 		"silverstripe-themes/simple": "3.1.*",
-		"tony13tv/silverstripe-sendgrid": "dev-master"
+		"tony13tv/silverstripe-sendgrid": "dev-master",
+		"nyeholt/news": "^1.3"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"

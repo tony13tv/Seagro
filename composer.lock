@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e605b2103ee47d4d9d3fa625012ce1e",
+    "content-hash": "d7d7b7e49ef684b4d965c63f5f844fa0",
     "packages": [
         {
             "name": "composer/installers",
@@ -161,6 +161,44 @@
                 "rest"
             ],
             "time": "2014-04-05T23:28:21+00:00"
+        },
+        {
+            "name": "nyeholt/news",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nyeholt/silverstripe-news.git",
+                "reference": "e5f23ebdc4dddf056f64db9e88ae3bf1b7bcebc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nyeholt/silverstripe-news/zipball/e5f23ebdc4dddf056f64db9e88ae3bf1b7bcebc0",
+                "reference": "e5f23ebdc4dddf056f64db9e88ae3bf1b7bcebc0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^3.1.0",
+                "silverstripe/framework": "^3.1.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                },
+                "installer-name": "news"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt"
+                }
+            ],
+            "description": "News module for silverstripe",
+            "keywords": [
+                "news",
+                "silverstripe"
+            ],
+            "time": "2016-11-02T11:13:33+00:00"
         },
         {
             "name": "silverstripe-themes/simple",
