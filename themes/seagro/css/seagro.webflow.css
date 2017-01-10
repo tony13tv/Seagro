@@ -1505,7 +1505,7 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 .card-news{
 	padding: 20px;
 	border-radius: 20px;
-	background-color: white;
+	background-color: #FBFBFD;
 }
 .content-card{
 	padding-right: 18px;
@@ -1527,4 +1527,39 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 .img-card img{
 	width: 100%;
 	height: 195px;
+}
+.boton_contactenos{
+  background-color: #97bb48;
+  border-radius: 10px;
+  float: right;
+}
+
+.contactenos{
+  padding-bottom: 72px;
+}
+
+#map{
+  height: 410px;
+  margin-right: 15px;
+  border-radius: 20px;
+}
+
+.store{
+  color: #2CAECC;
+  margin-bottom: 15px;
+}
+.store_hover{
+  background-color: #F7F7F7;
+}
+
+.store_hover .green-arrow{
+  display: inherit !important;
+}
+
+.green-arrow{
+  color: #97bb48;
+  font-size: 20px;
+  vertical-align: middle;
+  vertical-align: middle;
+  line-height: 100px;
 }
