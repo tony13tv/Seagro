@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ca626ce6-7076-42f8-99f1-d4aa48f9dd94" name="OlimpiadasEspeciales" url="http://ftp.olimpiadasespecialeshn.org">
+        <fileTransfer host="ftp.olimpiadasespecialeshn.org" port="21" password="dfe5dfc6df9bdfc7dfdadf9bdfcbdfcedfcbdfd9df99dfd9dfda" username="olimp297124">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

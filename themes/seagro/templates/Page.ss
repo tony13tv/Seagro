@@ -33,23 +33,6 @@
 	$Form
 	<% include Navbar %>
 	$Layout
-	<% if $Content %>
-    <div class="header interna" >
-        <div class="navegacion">
-			<% include BreadCrumbs %>
-            <h1 class="titulo-interna">$Title</h1>
-        </div>
-    </div>
-    <div class="picslider w-hidden-tiny"></div>
-    <div class="contenido-interior">
-		<div>
-			<div class="w-row">
-				$Content
-			</div>
-		</div>
-	</div>
-	<% end_if %>
-
     <% include Footer %>
     <% require javascript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') %>
     <% require javascript('themes/seagro/javascript/webflow.js') %>

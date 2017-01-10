@@ -16,7 +16,7 @@ $databaseConfig = array(
 // Set the site locale
 i18n::set_locale('es_ES');
 Security::setDefaultAdmin('administrador','admin1234');
-define('SS_ENVIRONMENT_TYPE', 'dev');
+Director::set_environment_type("dev");
 
 define('SENDGRIDMAILER_USERNAME', 'premperhn');
 define('SENDGRIDMAILER_PASSWORD', 'pr3mper2015');

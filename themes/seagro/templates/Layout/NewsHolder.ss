@@ -7,7 +7,7 @@
 <div class="picslider w-hidden-tiny" style="background-image: url($BannerTop.URL)"></div>
 <div class="contenido-interior" style="margin-top: 18px; margin-bottom: 22px;">
 
-	<% loop $TotalChildArticles %>
+	<% loop $TotalChildArticles(15) %>
 		<% if $MultipleOf(3, $min) %>
 			<div class="w-row display-flex" style="margin-bottom: 15px;">
 		<% end_if %>
@@ -32,5 +32,37 @@
 			</div>
 		<% end_if %>
 	<% end_loop %>
+
+	<% if $TotalChildArticles(15) %>
+        <div class="Pagination">
+			<% if $TotalChildArticles(15).MoreThanOnePage %>
+                <ul>
+					<% if $TotalChildArticles(15).NotFirstPage %>
+                        <li>
+                            <a class="prev" href="$TotalChildArticles(15).PrevLink"><</a>
+                        </li>
+					<% end_if %>
+					<% loop $TotalChildArticles(15).Pages %>
+						<% if $CurrentBool %>
+                            <li class="current-pagination">$PageNum</li>
+						<% else %>
+							<% if $Link %>
+                                <li>
+                                    <a href="$Link">$PageNum</a>
+                                </li>
+							<% else %>
+                                ...
+							<% end_if %>
+						<% end_if %>
+					<% end_loop %>
+					<% if $TotalChildArticles(15).NotLastPage %>
+                        <li>
+                            <a class="next" href="$TotalChildArticles(15).NextLink">></a>
+                        </li>
+					<% end_if %>
+                </ul>
+			<% end_if %>
+        </div>
+	<% end_if %>
 </div>
 

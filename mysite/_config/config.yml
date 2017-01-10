@@ -12,3 +12,6 @@ SSViewer:
 NewsHolder:
   extensions:
     - NewsHolderExtension
+NewsArticlr:
+  extensions:
+    - NewsArticleExtension
