@@ -1577,3 +1577,15 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 .search-form{
   min-width: 289px !important;
 }
+.menu-options{
+  background-color: #eef1e8 !important;
+}
+.menu-options li{
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.menu-options li a:hover{
+  color: white !important;
+  background-color: #97bb48 !important;
+}
