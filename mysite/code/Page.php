@@ -52,7 +52,7 @@ class Page_Controller extends ContentController {
 			TextField::create("Search", "", $searchText)->setAttribute('placeholder','Buscar')->addExtraClass('w-input')
 		);
 		$actions = new FieldList(
-			new FormAction('results', 'Buscar')
+			FormAction::create('results', 'Buscar')->addExtraClass('boton_contactenos w-button')
 		);
 		return new SearchForm($this, "SearchForm", $fields, $actions);
 	}

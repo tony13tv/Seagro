@@ -21,19 +21,6 @@
     </div>
 </div>
 <div class="seccin-productos" data-ix="productos-up-2">
-	<div>
-		<% with $SearchForm %>
-			<form $FormAttributes>
-				<% loop $Fields %>
-					$Field
-				<% end_loop %>
-				<% loop $Actions %>
-					$Field
-				<% end_loop %>
-			</form>
-		<% end_with %>
-
-	</div>
     <h1 class="titulo-seccion">Nuestros Productos</h1>
     <div class="contendor-productos">
         <% loop $Categories %>

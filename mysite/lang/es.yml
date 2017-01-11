@@ -31,3 +31,11 @@ es:
     db_Name: Nombre
     has_one_CategoryPage: Categoría
     has_many_Products: Productos
+  Store:
+    PLURALNAME: Tiendas
+    SINGULARNAME: Tienda
+    db_Title: Título
+    db_Content: Contenido
+    db_Latitude: Latitud
+    db_Longitude: Longitud
+    has_one_ContactPage: Página de contacto

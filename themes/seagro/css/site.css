@@ -1,0 +1,50 @@
+
+@media (min-width: 1200px) {
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .box_logos{
+        width: 100%;
+    }
+    .contenido-interior{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+
+@media (max-width: 767px) {
+    .display-flex{
+        display: inherit;
+    }
+
+    .card-news{
+        margin-bottom: 15px;
+    }
+
+    .content-new{
+        margin-left: 15px;
+    }
+    .box-search{
+        display: none;
+    }
+    .img-principal{
+        width: 175px;
+    }
+
+    .menu-options{
+        right: 0;
+        left: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+}

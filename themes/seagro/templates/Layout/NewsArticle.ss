@@ -6,7 +6,7 @@
 </div>
 <div class="picslider w-hidden-tiny" style="background-image: url($BannerTop.URL)"></div>
 <div class="contenido-interior" style="margin-top: 20px; margin-bottom: 40px;">
-    <div>
+    <div class="content-new">
         <div class="w-row">
             <div class="w-col w-col-6">
                 <img src="$Thumbnail.URL">
