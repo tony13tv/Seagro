@@ -7,8 +7,8 @@ global $databaseConfig;
 $databaseConfig = array(
 	'type' => 'MySQLDatabase',
 	'server' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'username' => 'seagro_user',
+	'password' => 'S3agr0#',
 	'database' => 'seagro',
 	'path' => ''
 );
