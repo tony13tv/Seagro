@@ -46,7 +46,7 @@ class Page_Controller extends ContentController {
 		if (HomePage::get()->count() > 0) {
 			return HomePage::get()->first()->Logos();
 		}else {
-			return new ArrayList([]);
+			return new ArrayList(array());
 		}
 
 	}
