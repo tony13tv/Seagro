@@ -3,15 +3,11 @@
 global $project;
 $project = 'Seagro';
 
-global $databaseConfig;
-$databaseConfig = array(
-	'type' => 'MySQLDatabase',
-	'server' => 'localhost',
-	'username' => 'seagro_user',
-	'password' => 'S3agr0#',
-	'database' => 'seagro',
-	'path' => ''
-);
+global $database;
+$database = '';
+
+// Use _ss_environment.php file for configuration
+require_once("conf/ConfigureFromEnv.php");
 
 // Set the site locale
 i18n::set_locale('es_ES');
