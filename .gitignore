@@ -13,6 +13,7 @@
 */xhprof_lib/config.php
 /xhprof_runs.php
 /silverstripe-cache/
+/silverstripe-sendgrid/
 /vendor/
 /themes/simple/
 /build/
