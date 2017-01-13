@@ -31,7 +31,7 @@ ErrorDocument 500 /assets/error-500.html
 
 	SetEnv HTTP_MOD_REWRITE On
 	RewriteEngine On
-	RewriteBase '/seagro'
+	RewriteBase '/'
 
 	
 
@@ -44,6 +44,6 @@ ErrorDocument 500 /assets/error-500.html
 	# Pass through the original path as a query parameter, and retain the existing parameters.
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule .* framework/main.php?url=%1 [QSA]
+	RewriteRule ^(.*)$ framework/main.php?url=$1&%{QUERY_STRING} [QSA]
 </IfModule>
 ### SILVERSTRIPE END ###
