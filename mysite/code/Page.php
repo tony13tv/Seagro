@@ -43,7 +43,12 @@ class Page_Controller extends ContentController {
 	}
 
 	public function AllLogos(){
-		return HomePage::get()->first()->Logos();
+		if (HomePage::get()->count() > 0) {
+			return HomePage::get()->first()->Logos();
+		}else {
+			return new ArrayList([]);
+		}
+
 	}
 
 	function SearchForm() {
