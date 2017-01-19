@@ -15,7 +15,43 @@
                         </div>
                         <div class="w-row">
                             <div class="colum-foto w-col w-col-5">
-                                <img src="$ProductImg.URL" width="509">
+                                <div>
+                                    <a class="w-inline-block w-lightbox" href="#">
+                                        <img height="235" sizes="(max-width: 479px) 82vw, (max-width: 767px) 282px, (max-width: 991px) 21vw, 22vw" src="$ProductImg.URL" srcset="{$ProductImg.URL} 500w, {$ProductImg.URL}, {$ProductImg.URL} 1080w, {$ProductImg.URL} 1200w" width="282">
+                                        <script class="w-json" type="application/json">
+                                            { "group": "product-{$ID}", "items": [{
+                                                "type": "image",
+                                                "_id": "584eea332b2d9f2955ea1152",
+                                                "fileName": "$Name",
+                                                "origFileName": "$Name",
+                                                "width": 1200,
+                                                "height": 674,
+                                                "fileSize": 558474,
+                                                "url": "$URL"
+                                            }] }
+                                        </script>
+                                    </a>
+                                </div>
+                                <div>
+                                    <% loop $Gallery %>
+                                        <a class="w-inline-block w-lightbox" href="#">
+                                            <img height="235" sizes="(max-width: 479px) 82vw, (max-width: 767px) 282px, (max-width: 991px) 21vw, 22vw" src="$URL" srcset="{$URL} 500w, {$URL}, {$URL} 1080w, {$URL} 1200w" width="282">
+                                            <script class="w-json" type="application/json">
+                                                { "group": "product-{$Up.ID}", "items": [{
+                                                    "type": "image",
+                                                    "_id": "584eea332b2d9f2955ea1152",
+                                                    "fileName": "$Name",
+                                                    "origFileName": "$Name",
+                                                    "width": 1200,
+                                                    "height": 674,
+                                                    "fileSize": 558474,
+                                                    "url": "$URL"
+                                                }] }
+                                            </script>
+                                        </a>
+                                    <% end_loop %>
+                                </div>
+
                             </div>
                             <div class="contenido w-col w-col-7">
                                 <div class="box-contenido-producto">
@@ -57,9 +93,48 @@
                         </div>
                         <div class="w-row">
                             <div class="colum-foto w-col w-col-5">
-								<img src="$ProductImg.URL" width="509">
+                                <div>
+                                    <a class="w-inline-block w-lightbox" href="#">
+                                        <img sizes="(max-width: 479px) 82vw, (max-width: 767px) 282px, (max-width: 991px) 21vw, 22vw" src="$ProductImg.URL" srcset="{$ProductImg.URL} 500w, {$ProductImg.URL}, {$ProductImg.URL} 1080w, {$ProductImg.URL} 1200w" width="500" height="365" style="margin-left: auto; margin-right: auto; display: block;">
+                                        <script class="w-json" type="application/json">
+                                            { "group": "product-{$ID}", "items": [{
+                                                "type": "image",
+                                                "_id": "584eea332b2d9f2955ea1152",
+                                                "fileName": "$ProductImg.Name",
+                                                "origFileName": "$ProductImg.Name",
+                                                "width": 1200,
+                                                "height": 674,
+                                                "fileSize": 558474,
+                                                "url": "$ProductImg.URL"
+                                            }] }
+                                        </script>
+                                    </a>
+                                </div>
+                                <div class="w-row ">
+                                    <% loop $Gallery %>
+                                        <div class="w-col w-col-3">
+                                            <div class="gallery-box">
+                                                <a class="w-inline-block w-lightbox" href="#">
+                                                    <img height="150" sizes="(max-width: 479px) 82vw, (max-width: 767px) 282px, (max-width: 991px) 21vw, 22vw" src="$URL" srcset="{$URL} 500w, {$URL}, {$URL} 1080w, {$URL} 1200w" width="282">
+                                                    <script class="w-json" type="application/json">
+                                                        { "group": "product-{$Up.ID}", "items": [{
+                                                            "type": "image",
+                                                            "_id": "584eea332b2d9f2955ea1152",
+                                                            "fileName": "$Name",
+                                                            "origFileName": "$Name",
+                                                            "width": 1200,
+                                                            "height": 674,
+                                                            "fileSize": 558474,
+                                                            "url": "$URL"
+                                                        }] }
+                                                    </script>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <% end_loop %>
+                                </div>
                             </div>
-                            <div class="contenido w-col w-col-7">
+                            <div class="contenido w-col w-col-7 product-info">
                                 <div class="box-contenido-producto">
                                     <div class="texto">
                                         <h1 class="titulo-producto verde">$Name</h1>

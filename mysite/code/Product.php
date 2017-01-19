@@ -13,4 +13,12 @@ class Product extends DataObject{
 		'Brand' => 'Brand',
 		'Subcategory' => 'Subcategory'
 	);
+	static $many_many = array(
+		'Gallery' => 'image'
+	);
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+		$fields->addFieldToTab('Root.Gallery', new UploadField('Gallery',  _t('Product.many_many_Gallery', 'Galería')));
+		return $fields;
+	}
 }

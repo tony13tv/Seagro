@@ -1589,3 +1589,15 @@ html.w-mod-js *[data-ix="pic-tractor"] {
   color: white !important;
   background-color: #97bb48 !important;
 }
+
+.w-lightbox{
+  width: 100%;
+}
+.gallery-box{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product-info{
+  min-height: 560px;
+}
