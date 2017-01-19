@@ -3,6 +3,7 @@
 class HomePage extends Page{
 
 	static $db = array(
+		'AboutContent1' => 'HTMLText',
 		'AboutContent' => 'HTMLText'
 	);
 
@@ -25,7 +26,8 @@ class HomePage extends Page{
 		$fields->addFieldToTab('Root.Logos', new UploadField('Logos'));
 		$fields->addFieldsToTab('Root.Conocenos', new UploadField('AboutImg1' , _t('HomePage.db_AboutImg1', 'Imagen 1')));
 		$fields->addFieldsToTab('Root.Conocenos', new UploadField('AboutImg2', _t('HomePage.db_AboutImg2', 'Imagen 2')));
-		$fields->addFieldsToTab('Root.Conocenos', new HtmlEditorField('AboutContent', _t('HomePage.db_AboutContent', 'Contenido')));
+		$fields->addFieldsToTab('Root.Conocenos', new HtmlEditorField('AboutContent1', _t('HomePage.db_AboutContent1', 'Contenido izquierdo')));
+		$fields->addFieldsToTab('Root.Conocenos', new HtmlEditorField('AboutContent', _t('HomePage.db_AboutContent', 'Contenido derecho')));
 		return $fields;
 	}
 }

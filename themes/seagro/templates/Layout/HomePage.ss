@@ -57,7 +57,7 @@
             <div class="colum-izquierda w-col w-col-6">
                 <div class="pic1-coffee" data-ix="pic-coffee" style="background-image: url($AboutImg1.URL)"></div>
                 <div>
-                    <h1 class="quienes-somos tituloslide" data-ix="productos-up-2"><em>Porque ser</em> <strong><em>Agro</em></strong> <em>es</em><br><em>es sentir</em> <strong><em>orgullo por Honduras,</em></strong><br><em>es amor por nuestras tierras</em><br><em>y sus cultivos</em></h1>
+                    <h1 class="quienes-somos tituloslide" data-ix="productos-up-2">$AboutContent1</h1>
                 </div>
             </div>
             <div class="colum-derecha w-col w-col-6">
