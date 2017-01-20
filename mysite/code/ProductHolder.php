@@ -1,6 +1,9 @@
 <?php
 
 class ProductHolder extends Page{
+	static $has_one = array(
+		'Banner' => 'Image'
+	);
 
 }
 

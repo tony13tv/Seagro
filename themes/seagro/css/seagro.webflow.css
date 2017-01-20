@@ -1,3 +1,6 @@
+body{
+  overflow-y: scroll !important;
+}
 .fondo {
   background-color: #edf1e7;
   background-image: url('../images/back2.png'), -webkit-linear-gradient(270deg, hsla(84, 26%, 93%, .38), hsla(84, 26%, 93%, .38));
@@ -1602,4 +1605,10 @@ html.w-mod-js *[data-ix="pic-tractor"] {
 
 .product-info{
   min-height: 560px;
+}
+
+.center-img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
