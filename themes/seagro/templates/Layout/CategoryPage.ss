@@ -204,10 +204,10 @@
 							<% end_if %>
                             <style>
                                 .foto-product-{$ID} {
-                                    background-image: url($ProductImg.URL) !important;
+                                    background-image: url($ProductImg.SetWidth(400).URL) !important;
                                 }
                                 .foto-product-{$ID}:hover {
-                                    background-image: linear-gradient(180deg, rgba(34, 126, 86, .73), rgba(34, 126, 86, .73)), url($ProductImg.URL) !important;
+                                    background-image: linear-gradient(180deg, rgba(34, 126, 86, .73), rgba(34, 126, 86, .73)), url($ProductImg.SetHeight(219).URL) !important;
                                 }
                             </style>
                             <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
@@ -235,10 +235,10 @@
 						<% end_if %>
                         <style>
                             .foto-product-{$ID} {
-                                background-image: url($ProductImg.URL) !important;
+                                background-image: url($ProductImg.SetWidth(400).URL) !important;
                             }
                             .foto-product-{$ID}:hover {
-                                background-image: linear-gradient(180deg, rgba(34, 126, 86, .73), rgba(34, 126, 86, .73)), url($ProductImg.URL) !important;
+                                background-image: linear-gradient(180deg, rgba(34, 126, 86, .73), rgba(34, 126, 86, .73)), url($ProductImg.SetHeight(219).URL) !important;
                             }
                         </style>
                         <div class="w-col w-col-3 w-col-medium-6 w-col-small-6">
